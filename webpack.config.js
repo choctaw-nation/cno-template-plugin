@@ -4,7 +4,7 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
-			'choctaw-events': __dirname + `/src/index.js`,
+			'cno-plugin': __dirname + `/src/index.js`,
 		},
 		resolve: {
 			...defaultConfig.resolve,
