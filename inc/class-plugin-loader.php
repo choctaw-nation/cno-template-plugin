@@ -4,11 +4,33 @@
  *
  * @since 1.0
  * @package ChoctawNation
- * @subpackage 
+ * @subpackage
  */
 
 /** Inits the Plugin */
 final class Plugin_Loader {
-	public function __construct( ) {
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+	}
+
+	/**
+	 * Initializes the Plugin
+	 *
+	 * @return void
+	 */
+	public function activate(): void {
+		flush_rewrite_rules();
+	}
+
+	/**
+	 * Handles Plugin Deactivation
+	 * (this is a callback function for the `register_deactivation_hook` function)
+	 *
+	 * @return void
+	 */
+	public function deactivate(): void {
+		flush_rewrite_rules();
 	}
 }

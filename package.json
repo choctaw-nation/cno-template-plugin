@@ -7,6 +7,15 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"author": "Choctaw Nation of Oklahoma",
+	"files": [
+		"dist",
+		"inc",
+		"template-parts",
+		"templates",
+		"readme.md",
+		"LICENSE",
+		"index.php"
+	],
 	"scripts": {
 		"build": "wp-scripts build",
 		"packages-update": "wp-scripts packages-update",
@@ -14,6 +23,8 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^26.16.0"
+		"@wordpress/scripts": "^27.9.0",
+		"eslint-config-react-app": "^7.0.1",
+		"wp-types": "^3.65.0"
 	}
 }
