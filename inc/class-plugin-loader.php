@@ -7,8 +7,10 @@
  * @subpackage
  */
 
+namespace ChoctawNation;
+
 /** Inits the Plugin */
-final class Plugin_Loader {
+class Plugin_Loader {
 	/**
 	 * Constructor
 	 */

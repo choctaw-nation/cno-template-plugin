@@ -14,6 +14,11 @@ A quick scaffolding for plugins.
 
 # Changelog
 
+## v1.1.1
+
+- Add webpack-remove-empty-scripts
+- Namespace the Plugin Loader class
+
 ## v1.1
 
 - Add ACF Stubs to composer
