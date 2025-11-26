@@ -23,7 +23,7 @@ export default {
 			},
 		],
 	},
-	ignoreFiles: [ '**/node_modules/**', '**/dist/**' ],
+	ignoreFiles: [ '**/node_modules/**', '**/build/**' ],
 	overrides: [
 		{
 			files: [ '**/*.scss' ],
