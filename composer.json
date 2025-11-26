@@ -9,7 +9,7 @@
 		}
 	},
 	"scripts": {
-		"phpcs": "phpcs --report-full --report-checkstyle=./phpcs-report.xml inc/ index.php",
+		"phpcs": "phpcs inc/ index.php",
 		"phpcbf": "phpcbf inc/ index.php"
 	},
 	"require-dev": {

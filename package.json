@@ -1,6 +1,6 @@
 {
 	"name": "choctaw-plugin-template",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Choctaw Plugin template",
 	"prettier": "@wordpress/prettier-config",
 	"browserslist": [
@@ -8,22 +8,32 @@
 	],
 	"author": "Choctaw Nation of Oklahoma",
 	"files": [
-		"dist",
+		"build",
 		"inc",
-		"template-parts",
-		"templates",
-		"readme.md",
+		"README.md",
 		"LICENSE",
+		"CHANGELOG.md",
 		"index.php"
 	],
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "wp-scripts build --blocks-manifest --webpack-copy-php",
+		"lint:css": "npx stylelint '**/*.scss' '**/*.css' --fix --allow-empty-input",
+		"lint:js": "npx eslint --fix",
 		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"plugin-zip": "wp-scripts build && wp-scripts plugin-zip",
+		"start": "wp-scripts start --blocks-manifest --webpack-copy-php"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.13.0",
-		"webpack-remove-empty-scripts": "^1.0.4"
+		"@eslint/compat": "^2",
+		"@eslint/eslintrc": "^3",
+		"@wordpress/scripts": "^31",
+		"eslint": "^9",
+		"eslint-config-prettier": "^10",
+		"eslint-import-resolver-typescript": "^4",
+		"eslint-plugin-react-hooks": "^7",
+		"globals": "^16",
+		"stylelint": "^16",
+		"stylelint-config-standard-scss": "^16",
+		"stylelint-scss": "^6"
 	}
 }
