@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1 - [December 11, 2025]
+
+- Fixed: Github Actions now have required permissions to run release & deploy
+
 ## v1.2.0 - [November 26, 2025]
 
 -   Added: lints and configs

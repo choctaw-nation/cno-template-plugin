@@ -3,16 +3,15 @@
  * Plugin Name: Choctaw Plugin Starter
  * Plugin URI: https://github.com/choctaw-nation/cno-template-plugin
  * Description: Quick Boilerplate for starting a new plugin
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Choctaw Nation of Oklahoma
  * Author URI: https://www.choctawnation.com
  * Text Domain: cno
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Requires PHP: 8.2
- * Requires: 6.5.0
- * Requires at least: 6.6.0
- * Tested up to: 6.8.3
+ * Requires at least: 6.7.0
+ * Tested up to: 6.9.0
  *
  * @package ChoctawNation
  * @subpackage PluginStarter
