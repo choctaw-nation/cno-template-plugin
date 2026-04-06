@@ -45,6 +45,10 @@ class Plugin_Loader {
 		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '1.1.0' );
 	}
 
+	public static function uninstall(): void {
+		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '1.1.0' );
+	}
+
 	/**
 	 * Register Gutenberg Block
 	 */

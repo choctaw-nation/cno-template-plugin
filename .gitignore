@@ -4,3 +4,8 @@
 /.DS_Store
 /build
 *.zip
+
+.vscode/launch.json
+.wp-tests/
+build/
+html-coverage/

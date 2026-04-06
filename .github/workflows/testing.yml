@@ -1,0 +1,51 @@
+name: Testing
+
+on:
+    pull_request:
+        branches: [dev]
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    phpunit:
+        name: Run tests
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                php-version: ["8.2"]
+        services:
+            database:
+                image: mysql:latest
+                env:
+                    MYSQL_DATABASE: wordpress_tests
+                    MYSQL_ROOT_PASSWORD: root
+                ports:
+                    - 3306:3306
+        steps:
+            - name: Check out source code
+              uses: actions/checkout@main
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@master
+              with:
+                  php-version: ${{matrix.php-version}}
+                  tools: phpunit-polyfills:1.1
+
+            - name: Install SVN
+              run: sudo apt-get update && sudo apt-get install -y subversion
+
+            - name: Setup Composer
+              run: |
+                  curl -sS https://getcomposer.org/installer | php
+                  mv composer.phar /usr/local/bin/composer
+
+            - name: Install dependencies
+              run: composer install
+
+            - name: Setup WP Tests
+              run: bash wp-content/themes/{{theme_name}}/bin/install-wp-tests.sh wordpress_tests root root 127.0.0.1 latest true
+
+            - name: Run tests
+              run: phpunit

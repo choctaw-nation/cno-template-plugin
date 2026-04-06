@@ -38,7 +38,16 @@
 		"editor.useTabStops": true,
 		"prettier.useTabs": false
 	},
-	"cSpell.words": [ "alignfull", "featuredmedia" ],
+	"cSpell.words": [
+		"alignfull",
+		"autoloading",
+		"classmap",
+		"docroot",
+		"featuredmedia",
+		"instantiator",
+		"Squiz",
+		"wpengine"
+	],
 	"css.format.spaceAroundSelectorSeparator": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "always",
