@@ -45,8 +45,19 @@ class Plugin_Loader {
 		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '1.1.0' );
 	}
 
+	/**
+	 * Handles Plugin Uninstallation
+	 * (this is a callback function for the `register_uninstall_hook` function)
+	 */
 	public static function uninstall(): void {
-		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '1.1.0' );
+		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '2.0.0' );
+	}
+
+	/**
+	 * Loads the Plugin
+	 */
+	public function load_plugin(): void {
+		_doing_it_wrong( __METHOD__, 'Method not implemented yet', '2.0.0' );
 	}
 
 	/**
