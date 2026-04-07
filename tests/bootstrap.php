@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file.
  *
- * @package Cno_Cnhsa_Content_Federation
+ * @package ChoctawNation
  */
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
@@ -27,9 +27,12 @@ require_once "{$_tests_dir}/includes/functions.php";
 
 /**
  * Manually load the plugin being tested.
+ *
+ * @throws RuntimeException If the plugin file name has not been changed.
  */
 function _manually_load_plugin() {
-	throw new RuntimeException('Update the plugin name!');
+	throw new RuntimeException( 'Update the plugin name!' );
+	// phpcs:ignore Squiz.PHP.NonExecutableCode.Unreachable
 	require dirname( __DIR__, 1 ) . '/PLUGIN-NAME.php';
 }
 

@@ -45,6 +45,7 @@
 		"docroot",
 		"featuredmedia",
 		"instantiator",
+		"muplugins",
 		"Squiz",
 		"wpengine"
 	],
@@ -68,6 +69,6 @@
 	"html.format.templating": true,
 	"phpSniffer.standard": "phpcs.xml.dist",
 	"scss.format.spaceAroundSelectorSeparator": true,
-	"stylelint.snippet": [ "css", "scss" ],
-	"stylelint.validate": [ "css", "scss" ]
+	"stylelint.snippet": ["css", "scss"],
+	"stylelint.validate": ["css", "scss"]
 }
