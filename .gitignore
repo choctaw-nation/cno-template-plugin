@@ -6,6 +6,8 @@
 *.zip
 
 .vscode/launch.json
+
+# Tests
 .wp-tests/
-build/
 html-coverage/
+.phpunit.result.cache
