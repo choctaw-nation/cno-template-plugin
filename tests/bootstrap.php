@@ -29,7 +29,7 @@ require_once "{$_tests_dir}/includes/functions.php";
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	throw new RuntimeException('Update the plugin name!')
+	throw new RuntimeException('Update the plugin name!');
 	require dirname( __DIR__, 1 ) . '/PLUGIN-NAME.php';
 }
 

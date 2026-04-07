@@ -10,7 +10,7 @@
 namespace ChoctawNation\Tests;
 
 /**
- * Class Test_Admin_Screen
+ * Class Test_Sample
  */
 class Test_Sample extends WP_UnitTestCase
 {

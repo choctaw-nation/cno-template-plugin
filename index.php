@@ -23,8 +23,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+$cno_autoload_path = __DIR__ . '/vendor/autoload.php';
 
+if ( ! file_exists( $cno_autoload_path ) ) {
+	add_action(
+		'admin_notices',
+		static function () {
+			echo '<div class="notice notice-error"><p>Choctaw Plugin Starter is missing required dependencies. Please run Composer install or deploy the plugin with its vendor directory included.</p></div>';
+		}
+	);
+
+	return;
+}
+
+require_once $cno_autoload_path;
 $cno_plugin = new Plugin_Loader( __DIR__ );
 
 // Plugin Lifecycle Hooks

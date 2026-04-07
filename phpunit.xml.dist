@@ -2,7 +2,7 @@
 <phpunit bootstrap="tests/bootstrap.php" backupGlobals="false" colors="true" convertErrorsToExceptions="true" convertWarningsToExceptions="true" convertNoticesToExceptions="true" convertDeprecationsToExceptions="true" verbose="true">
 	<testsuites>
 		<testsuite name="sample">
-			<!-- <file>tests/test-admin-screen-registration.php</file> -->
+			<directory>tests/</directory>
 		</testsuite>
 	</testsuites>
 	<coverage cacheDirectory=".phpunit.cache">
