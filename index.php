@@ -23,8 +23,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
-require_once __DIR__ . '/inc/class-plugin-loader.php';
-$plugin_loader = new Plugin_Loader( plugin_dir_path( __FILE__ ) );
+$cno_autoload_path = __DIR__ . '/vendor/autoload.php';
 
-register_activation_hook( __FILE__, array( $plugin_loader, 'activate' ) );
-register_deactivation_hook( __FILE__, array( $plugin_loader, 'deactivate' ) );
+if ( ! file_exists( $cno_autoload_path ) ) {
+	add_action(
+		'admin_notices',
+		static function () {
+			echo '<div class="notice notice-error"><p>Choctaw Plugin Starter is missing required dependencies. Please run Composer install or deploy the plugin with its vendor directory included.</p></div>';
+		}
+	);
+
+	return;
+}
+
+require_once $cno_autoload_path;
+$cno_plugin = new Plugin_Loader( __DIR__ );
+
+// Plugin Lifecycle Hooks
+register_activation_hook( __FILE__, array( $cno_plugin, 'activate' ) );
+
+// Static method for uninstall since the plugin can't rely on instance methods.
+register_uninstall_hook( __FILE__, array( 'ChoctawNation\Plugin_Loader', 'uninstall' ) );
+
+// Load the Plugin
+add_action( 'plugins_loaded', array( $cno_plugin, 'load_plugin' ) );

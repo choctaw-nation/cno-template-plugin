@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0 - [April 6, 2026]
+
+- Breaking: Now uses classmap autoloading by default!
+- Added: Testing code:
+	- `bin` scripts
+	- `phpunit.xml.dist`
+
 ## v1.2.1 - [December 11, 2025]
 
 - Fixed: Github Actions now have required permissions to run release & deploy

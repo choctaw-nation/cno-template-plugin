@@ -4,3 +4,10 @@
 /.DS_Store
 /build
 *.zip
+
+.vscode/launch.json
+
+# Tests
+.wp-tests/
+html-coverage/
+.phpunit.result.cache
