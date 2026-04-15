@@ -3,7 +3,7 @@
  * Plugin Name: Choctaw Plugin Starter
  * Plugin URI: https://github.com/choctaw-nation/cno-template-plugin
  * Description: Quick Boilerplate for starting a new plugin
- * Version: 1.2.1
+ * Version: 2.0.0
  * Author: Choctaw Nation of Oklahoma
  * Author URI: https://www.choctawnation.com
  * Text Domain: cno

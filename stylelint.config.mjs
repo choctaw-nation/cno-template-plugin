@@ -9,6 +9,13 @@ export default {
 				message: 'Expected function name to be kebab-case',
 			},
 		],
+		'selector-class-pattern': [
+			'^_?(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*(__[a-z0-9]+)?(--[a-z0-9]+)?$',
+			{
+				message:
+					'Expected class selector to be kebab-case or BEM-style (block__element--modifier)',
+			},
+		],
 		'scss/at-mixin-pattern': [
 			'^_?(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$',
 			{
@@ -23,7 +30,7 @@ export default {
 			},
 		],
 	},
-	ignoreFiles: [ '**/node_modules/**', '**/build/**' ],
+	ignoreFiles: [ '**/node_modules/**', '**/build/**', '**/vendor/**' ],
 	overrides: [
 		{
 			files: [ '**/*.scss' ],
