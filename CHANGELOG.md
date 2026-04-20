@@ -1,15 +1,16 @@
 # Changelog
 
-## v2.0.0 - [April 6, 2026]
+## v2.0.0 - [April 15, 2026]
 
-- Breaking: Now uses classmap autoloading by default!
-- Added: Testing code:
-	- `bin` scripts
-	- `phpunit.xml.dist`
+-   Breaking: Now uses classmap autoloading by default!
+-   Added: Testing code:
+    -   `bin` scripts
+    -   `phpunit.xml.dist`
+-   Updated: Eslint upgrade! Kept at v9 until rest of ecosystem is compatible with v10
 
 ## v1.2.1 - [December 11, 2025]
 
-- Fixed: Github Actions now have required permissions to run release & deploy
+-   Fixed: Github Actions now have required permissions to run release & deploy
 
 ## v1.2.0 - [November 26, 2025]
 
